@@ -22,6 +22,8 @@ export class FestivalListComponent implements OnInit {
     this.festivalListService.getFestivalList().subscribe(response =>{
       this.festivals = response;
       this.modifyResponseFormat();
+    },error=>{
+      throw new Error(error.message);
     });
   }
 
