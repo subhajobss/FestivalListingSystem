@@ -1,0 +1,10 @@
+<div *ngFor="let label of lables| keyvalue">
+  <h2>Record {{label.key}}</h2>
+  <div *ngFor="let band of label.value | keyvalue">
+    <h3 class="band-margin">BAND {{band.key}}</h3>
+    <div *ngFor="let fest of band.value">
+      <h4 class="fest-margin">{{fest}}</h4>
+    </div>
+  </div>
+
+</div>
